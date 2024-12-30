@@ -1,5 +1,7 @@
 package tarefa_controle_de_fluxo;
 
+import java.util.Scanner;
+
 public class MediaStatus {
 	
 	public String verificarStatus(float media) {
@@ -13,13 +15,21 @@ public class MediaStatus {
 		}
 
 public static void main(String[] args) {
-
+	
+	Scanner scanner = new Scanner(System.in);
 	Notas notas = new Notas();
 
-	notas.setNota1(4);
-	notas.setNota2(8);
-	notas.setNota3(7);
-	notas.setNota4(9);
+	System.out.println("Digite a primeira nota: ");
+    notas.setNota1(scanner.nextFloat());
+
+    System.out.println("Digite a segunda nota: ");
+    notas.setNota2(scanner.nextFloat());
+
+    System.out.println("Digite a terceira nota: ");
+    notas.setNota3(scanner.nextFloat());
+
+    System.out.println("Digite a quarta nota: ");
+    notas.setNota4(scanner.nextFloat());
 	
 	float media = notas.calcularMedia();
 	
